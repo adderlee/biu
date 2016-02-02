@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}HiPOS{% endblock %}</title>
+    {% block head %}
+    <link rel="stylesheet" href="/assets/themes/default/main.css">
+    <link rel="stylesheet" href="/assets/jquery-ui.css">
+    <script src="/assets/jquery-1.10.2.js"></script>
+    <script src="/assets/jquery-ui.js"></script>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content %}
+    <section id="navibar" class="layout-wrap">
+    <ul>
+      {% for ni in navis %}
+      <li{% if ni.name == current %} class="current"{% endif %}>
+      <a href="{{ni.link}}"><span>{{ni.title}}</span></a>
+      {% if not loop.last %}
+      <span class="sep">|</span>
+      {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    </section>
+    {% endblock %}
+    <section id="footer" class="layout-wrap">
+    <p>Biu - 2016</p>
+    </section>
+  </body>
+</html>

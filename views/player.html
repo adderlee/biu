@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Biu{% endblock %}</title>
+    {% block head %}
+    <link rel="stylesheet" href="/ccl/style.css" />
+    <link rel="stylesheet" href="/assets/biu/style.css" />
+    <script type="text/javascript" src="/ccl/CommentCoreLibrary.js"></script>
+    <script src="/assets/jquery-1.11.1.js"></script>
+    <script src="/assets/jquery-ui.js"></script>
+    <script src="/assets/socket.io-1.4.5.js"></script>
+    <script src="/assets/biu/player.js"></script>
+    {% endblock %}
+  </head>
+  <body>
+    <div id="ccl-wrapper" class="abp" style="background-color: #000;min-height: 480px;">
+      <div id='ccl-stage' class='container'></div>
+      <video id="video-player" autobuffer="true" data-setup="{}" width="100%" height="100%" preload="auto">
+      </video>
+      <img id="prg-picture">
+    </div>
+  </body>
+</html>
